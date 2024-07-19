@@ -1,0 +1,1 @@
+icd.exe /Build-ProvisioningPackage /CustomizationXML:customizations.xml /PackagePath:"Generic_bypass OOBE.ppkg" /StoreFile:"C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Imaging and Configuration Designer\x86\Microsoft-Desktop-Provisioning.dat"

@@ -1,0 +1,14 @@
+The customizations.xml file can be used to build a Windows provisioning package to quickly bypass the Windows 11 OOBE setup unattended. On the workstations I've tested this on, total time before you're dropped to the Windows desktop is under 5 minutes, typically closer to 3 minutes or less.
+
+The key "features" of this package is:
+- start menu is "debloated" by setting specific pinned items; Brave, Firefox, and Chrome will all be auto-pinned to the front of the start menu the next time you log in if they're installed. Beyond that, **all the default pinned shortcuts/Office apps are kept intact without any cloud/Microsoft Store bloatware being pinned by default**
+- default "admin" account that gets created is autologged into initially (password is in the XML file)
+- privacy prompt is disabled; any telemetry or privacy related settings will need to be manually set in the registry
+- timezone is set to EST/-5GMT by default
+- Cortana is explicitly disabled
+
+This was primarily made for me and my purposes, so feel free to modify the customizations.xml file as you see fit. To build the package, you will need Windows Configuration Designer installed. Feel free to open an issue to suggest improvements -- I'm in the process of researching / building out a powershell script that detects/deletes HKLM registry keys/values that silently install OEM bloatware during the OOBE setup (e.g. HP Wolf) and can be subsequently added/executed as a ProvisioningCommand.
+
+https://learn.microsoft.com/en-us/windows/configuration/provisioning-packages/provisioning-install-icd
+
+To use the provisioning package, copy it to a USB drive and insert it into a new/factory reset Windows 11 computer at the "Is this the right country or region?" OOBE screen. The provisioning package will be automatically detected/read and immediately start setting up the PC without any user intervention. If you've never used this tooling before, it's like magic.
