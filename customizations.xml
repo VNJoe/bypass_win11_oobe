@@ -38,6 +38,9 @@
 					<TimeLanguageSettings>
 						<ConfigureTimeZone>Eastern Standard Time</ConfigureTimeZone>
 					</TimeLanguageSettings>
+					<WindowsAI>
+						<TurnOffWindowsCopilot>1</TurnOffWindowsCopilot>
+					</WindowsAI>
 				</Policies>
 				<ProvisioningCommands>
 					<PrimaryContext>
