@@ -17,11 +17,11 @@
 						<ComputerName>%SERIAL%</ComputerName>
 					</ComputerAccount>
 					<Users>
-						<User UserName="User" Name="admin">
+						<User UserName="User" Name="User">
 							<Password>tulip5PLATFORM!</Password>
 							<UserGroup>Administrators</UserGroup>
 						</User>
-						<User UserName="AfinetyAdmin" Name="admin">
+						<User UserName="AfinetyAdmin" Name="AfinityAdmin">
 							<Password>adam1TWELVE!</Password>
 							<UserGroup>Administrators</UserGroup>
 						</User>
@@ -60,14 +60,11 @@
 				<ProvisioningCommands>
 					<PrimaryContext>
 						<Command>
-							<CommandConfig Name="reg_AutoAdminLogon">
-								<CommandLine>reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v "AutoAdminLogon" /t REG_SZ /d "1" /f</CommandLine>
-							</CommandConfig>
 							<CommandConfig Name="reg_DefaultUsername">
-								<CommandLine>reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v "DefaultUsername" /t REG_SZ /d "admin" /f</CommandLine>
+								<CommandLine>reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v "DefaultUsername" /t REG_SZ /d "User" /f</CommandLine>
 							</CommandConfig>
 							<CommandConfig Name="reg_DefaultPassword">
-								<CommandLine>reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v "DefaultPassword" /t REG_SZ /d "Letmein#2024" /f</CommandLine>
+								<CommandLine>reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v "DefaultPassword" /t REG_SZ /d "tulip5PLATFORM!" /f</CommandLine>
 							</CommandConfig>
 							<CommandConfig Name="reg_AutoLogonCount">
 								<CommandLine>reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v "AutoLogonCount" /t REG_DWORD /d "1" /f</CommandLine>
