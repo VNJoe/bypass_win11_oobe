@@ -45,6 +45,12 @@
 					<WindowsAI>
 						<TurnOffWindowsCopilot>1</TurnOffWindowsCopilot>
 					</WindowsAI>
+				        <Power>
+			        		<SelectLidCloseActionOnBattery>Take no action</SelectLidCloseActionOnBattery>
+            					<SelectLidCloseActionPluggedIn>Take no action</SelectLidCloseActionPluggedIn>
+            					<UnattendedSleepTimeoutOnBattery>0</UnattendedSleepTimeoutOnBattery>
+						<UnattendedSleepTimeoutPluggedIn>0</UnattendedSleepTimeoutPluggedIn>
+					</Power>
 				</Policies>
 				<ProvisioningCommands>
 					<PrimaryContext>
