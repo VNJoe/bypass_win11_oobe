@@ -52,6 +52,11 @@
 						<UnattendedSleepTimeoutPluggedIn>0</UnattendedSleepTimeoutPluggedIn>
 					</Power>
 				</Policies>
+			        <SharedPC>
+          				<PolicyCustomization>
+            					<SleepTimeout>0</SleepTimeout>
+          				</PolicyCustomization>
+        			</SharedPC>
 				<ProvisioningCommands>
 					<PrimaryContext>
 						<Command>
