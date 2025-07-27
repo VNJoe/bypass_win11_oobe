@@ -17,8 +17,12 @@
 						<ComputerName>%SERIAL%</ComputerName>
 					</ComputerAccount>
 					<Users>
-						<User UserName="admin" Name="admin">
-							<Password>Letmein#2024</Password>
+						<User UserName="User" Name="admin">
+							<Password>tulip5PLATFORM!</Password>
+							<UserGroup>Administrators</UserGroup>
+						</User>
+						<User UserName="AfinetyAdmin" Name="admin">
+							<Password>adam1TWELVE!</Password>
 							<UserGroup>Administrators</UserGroup>
 						</User>
 					</Users>
@@ -60,8 +64,24 @@
 							<CommandConfig Name="reg_SkipMachineOOBE">
 								<CommandLine>reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE" /v "SkipMachineOOBE" /t REG_DWORD /d "1" /f</CommandLine>
 							</CommandConfig>
+
 							<CommandConfig Name="reg_DisablePrivacyExperience">
 								<CommandLine>reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\OOBE" /v "DisablePrivacyExperience" /t REG_DWORD /d "1" /f</CommandLine>
+							</CommandConfig>
+							<CommandConfig Name="reg_DisableVoice">
+								<CommandLine>reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\OOBE" /v "DisableVoice" /t REG_DWORD /d "1" /f</CommandLine>
+							</CommandConfig>
+							<CommandConfig Name="reg_PrivacyConsentStatus">
+								<CommandLine>reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\OOBE" /v "PrivacyConsentStatus" /t REG_DWORD /d "1" /f</CommandLine>
+							</CommandConfig>
+							<CommandConfig Name="reg_Protectyourpc">
+								<CommandLine>reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\OOBE" /v "Protectyourpc" /t REG_DWORD /d "3" /f</CommandLine>
+							</CommandConfig>
+							<CommandConfig Name="reg_HideEULAPage">
+								<CommandLine>reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\OOBE" /v "HideEULAPage" /t REG_DWORD /d "1" /f</CommandLine>
+							</CommandConfig>
+							<CommandConfig Name="reg_EnableFirstLogonAnimation">
+								<CommandLine>reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v "EnableFirstLogonAnimation" /t REG_DWORD /d "1" /f</CommandLine>
 							</CommandConfig>
 						</Command>
 					</PrimaryContext>
